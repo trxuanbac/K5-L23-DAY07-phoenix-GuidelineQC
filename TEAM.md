@@ -1,9 +1,9 @@
 # Thông tin nhóm
 
-- Tên nhóm:
-- Mã thành viên (ba chữ số):
-- Người điều phối:
-- Người review bản cuối:
+- Tên nhóm: Phoenix
+- Mã thành viên (ba chữ số): 101, 102
+- Người điều phối: 101
+- Người review bản cuối: 102
 - Commit chốt bài (điền ở kênh nộp sau khi commit):
 
 ## Kết quả tóm tắt (điền cuối bài)
