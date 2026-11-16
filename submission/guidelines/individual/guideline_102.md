@@ -13,9 +13,9 @@
 Nhãn bounding box 2D dùng để huấn luyện và đánh giá mô hình thị giác máy tính phát hiện người và phương tiện giao thông đường phố (phục vụ hệ thống hỗ trợ lái xe nâng cao ADAS hoặc camera giám sát giao thông đô thị thông minh). 
 
 * **Rủi ro an toàn & Nguyên tắc cốt lõi:**
-  * Sai sót nghiêm trọng nhất là **bỏ sót (False Negative)** người đi bộ, người điều khiển xe máy hoặc xe cộ đang di chuyển, có thể dẫn đến tai nạn giao thông.
-  * Việc **gán nhầm (False Positive)** các vật thể nhân tạo tĩnh như tượng đài (`statue`), ma-nơ-canh (`mannequin`), hình nộm, búp bê đồ chơi hoặc hình ảnh phản chiếu qua gương thành con người thật (`person`) sẽ gây hiện tượng "phanh ma" (phantom braking) làm dừng xe đột ngột, gây nguy hiểm khôn lường cho các phương tiện phía sau.
-  * **Nguyên tắc phân định:** `person` chỉ dành riêng cho con người thật còn sống. Tượng và ma-nơ-canh là các vật thể trang trí/nghệ thuật nhân tạo vô tri, dứt khoát không thể xếp vào lớp người.
+  * Sai sót nghiêm trọng nhất là **bỏ sót (False Negative)** người đi bộ, người điều khiển xe máy hoặc xe cộ đang di chuyển, có thể dẫn đến va chạm tai nạn.
+  * Việc **gán nhầm (False Positive)** các vật thể nhân tạo tĩnh như tượng đài (`statue`), ma-nơ-canh (`mannequin`), búp bê đồ chơi hoặc hình ảnh phản chiếu qua gương thành con người thật (`person`) sẽ gây hiện tượng "phanh ma" (phantom braking) làm dừng xe đột ngột, gây nguy hiểm cho phương tiện phía sau.
+  * **Nguyên tắc phân định:** `person` chỉ dành riêng cho con người thật còn sống. Tượng và ma-nơ-canh là các vật thể trang trí/nghệ thuật nhân tạo vô tri, dứt khoát không được xếp vào lớp người.
 
 ---
 
@@ -25,18 +25,16 @@ Nhãn bounding box 2D dùng để huấn luyện và đánh giá mô hình thị
 
 | Lớp | Định nghĩa chuẩn xác | Ví dụ (kèm ID ảnh) | Phản ví dụ / Tuyệt đối không gán |
 |---|---|---|---|
-| `person` | **Con người thật còn sống** đang đi bộ, đứng, ngồi, bán hàng hoặc đang điều khiển phương tiện trên đường. | Người lái xe máy `img_005.jpg`, người đi bộ sang đường `img_014.jpg`, người đứng chờ ở bến xe buýt `img_032.jpg`. | **Tượng đồng/đá (`statue`)** `img_017.jpg`, **ma-nơ-canh (`mannequin`)** `img_033.jpg`, **tượng Predator** `img_011.jpg`, **ảnh chân dung in quảng cáo** `img_018.jpg`, **búp bê/đồ chơi** `img_038.jpg`. |
-| `car` | Ô tô con từ 4–7 chỗ gồm sedan, hatchback, SUV, crossover và xe bán tải nguyên bản chưa gắn thùng cao. | Ô tô con lưu thông trên đường `img_013.jpg`, `img_032.jpg`, ô tô con trên sàn xe chở xe `img_002.jpg`. | Mô hình xe đồ chơi trong tủ kính `img_038.jpg` (*loại bỏ, không gán*); xe tuk-tuk `img_004.jpg`. |
+| `person` | **Con người thật còn sống** đang đi bộ, đứng, ngồi, bán hàng hoặc đang điều khiển phương tiện trên đường. | Người lái xe máy `img_005.jpg`, người đi bộ sang đường `img_014.jpg`, người đứng bên đường `img_001.jpg`. | **Tượng đồng/đá (`statue`)** `img_017.jpg`, **ma-nơ-canh (`mannequin`)** `img_033.jpg`, **tượng Predator** `img_011.jpg`, **ảnh chân dung in quảng cáo** `img_018.jpg`, **búp bê/đồ chơi** `img_038.jpg`. |
+| `car` | Ô tô con từ 4–7 chỗ gồm sedan, hatchback, SUV, crossover và xe bán tải nguyên bản chưa gắn thùng cao. | Ô tô con lưu thông trên đường `img_013.jpg`, ô tô con trên sàn xe chở xe `img_002.jpg`. | Mô hình xe đồ chơi trong tủ kính `img_038.jpg` (*loại bỏ, không gán*); xe tuk-tuk `img_004.jpg`. |
 | `truck` | Xe tải chở hàng mọi kích cỡ, xe đầu kéo, xe chuyên dụng có cabin tách biệt với thùng hàng. | Xe tải chở ô tô `img_002.jpg`, xe tải chở hàng trong kho `img_007.jpg`, xe tải nhẹ cabin lật `img_036.jpg`. | Tượng đài xe bán tải bằng đá hoa cương `img_027.jpg` (*loại bỏ vì là tượng/monument*); xe van thùng kín liền khối. |
 | `van` | Xe ô tô chở người hoặc hàng dạng thùng kín liền khối giữa cabin và khoang sau (không có vách hở). | Xe van di chuyển ban đêm `img_031.jpg`. | Xe bán tải gắn nắp thùng cao tháo rời `img_037.jpg` (xếp vào truck/bán tải). |
 | `motorcycle` | Xe hai bánh gắn động cơ đốt trong hoặc động cơ điện (xe máy, mô tô, scooter). | Đoàn người đi xe máy `img_005.jpg`, `img_008.jpg`, xe máy trong hầm `img_026.jpg`. | Xe đạp, xe xích lô không có động cơ `img_006.jpg`, `img_023.jpg`, `img_039.jpg` (*loại bỏ*). |
 | `ignore_region` | Vùng không yêu cầu gán nhãn từng vật thể đơn lẻ, dùng cho đám đông dày đặc hoặc cụm vật thể quá nhỏ/xa. | Vùng người và xe quá xa, nhòe ở cuối đường `img_025.jpg`, `img_040.jpg`. | Các phương tiện hoặc người ở cự ly gần nhìn rõ chi tiết (bắt buộc phải gán box riêng). |
 
-* **Khảo sát kỹ các ca ngoài taxonomy khởi đầu:**
+* **Đề xuất bổ sung lớp ngoài taxonomy khởi đầu v0:**
   * **Xe 3 bánh / Tuk-tuk (`img_004.jpg`, `img_016.jpg`, `img_035.jpg`):** Bản v0 chưa có lớp. Đề xuất bổ sung lớp `tuk_tuk` trong buổi họp Pha 2.
-  * **Xe buýt (`bus`):** Xuất hiện thực tế trong các ảnh có xe buýt lưu thông: `img_009.jpg` (xe buýt lớn chạy sau xích lô ở Huế), `img_031.jpg` (xe buýt/khách ban đêm), `img_040.jpg` (xe buýt đô thị Bangkok).
-    * *Lưu ý quan trọng:* Ảnh `img_032.jpg` chỉ là **bến chờ xe buýt (bus stop)** nơi người dân đứng chờ và có ô tô con chạy qua, **hoàn toàn KHÔNG có xe buýt** trong khung hình.
-  * **Vật thể nhân tạo mô phỏng (Tượng `statue`, Ma-nơ-canh `mannequin`):** Tuyệt đối không gán vào lớp `person` (xem chi tiết mục 3.5).
+  * **Xe buýt (`bus`):** Đề xuất bổ sung lớp `bus` cho các phương tiện vận tải hành khách cỡ lớn (`img_009.jpg`, `img_031.jpg`, `img_040.jpg`).
 
 ---
 
@@ -86,7 +84,7 @@ Mỗi bounding box bắt buộc phải gán đầy đủ 3 thuộc tính sau:
   * **Hình in phẳng 2D:** Áp phích chân dung chính khách (`img_018.jpg`) $\rightarrow$ **KHÔNG GÁN**.
   * **Búp bê, mô hình đồ chơi:** Búp bê và mô hình ô tô nhỏ trong tủ kính (`img_038.jpg`) $\rightarrow$ **KHÔNG GÁN**.
   * **Ảnh phản chiếu qua gương:** Hình ảnh ảo nhìn qua gương chiếu hậu (`img_020.jpg`) $\rightarrow$ **KHÔNG GÁN**.
-* *Lưu ý về ảnh trống:* Các ảnh như `img_017.jpg`, `img_020.jpg`, `img_027.jpg`, `img_033.jpg`, `img_038.jpg` là các **ảnh 0 annotation (ảnh không có đối tượng cần gán)**, vẫn phải giữ trong Task CVAT và xuất file COCO hợp lệ.
+* *Lưu ý về ảnh trống:* Các ảnh chỉ có tượng hoặc ma-nơ-canh (`img_017.jpg`, `img_020.jpg`, `img_027.jpg`, `img_033.jpg`, `img_038.jpg`) là các **ảnh 0 annotation (ảnh không có đối tượng cần gán)**, vẫn phải giữ trong Task CVAT và xuất file COCO hợp lệ.
 
 ### 3.6. Vật thể quá nhỏ và Vùng mờ nhòe
 * Những vật thể có chiều cao bounding box $< 20\text{ px}$ ở hậu cảnh xa: Không gán box đơn lẻ.
@@ -100,9 +98,9 @@ Dưới đây là 7 tình huống biên thực tế được thành viên 102 kh
 
 | Ảnh | Tình huống thực tế | Mã đề xuất | Quyết định của thành viên 102 | Lý do căn cứ |
 |---|---|:---:|---|---|
-| `img_017.jpg` | Tượng công tước Duke of Wellington cưỡi ngựa đội nón giao thông. | `R-03` | **Không gán box `person`** (đây là ảnh 0 annotation). | Là tượng kim loại nhân tạo tĩnh (`statue`), không có hành vi sống của con người, không được đánh đồng với `person`. |
-| `img_033.jpg` | Ma-nơ-canh thời trang trong tủ kính phố Buchanan. | `R-03` | **Không gán box `person`** (đây là ảnh 0 annotation). | Là ma-nơ-canh bằng nhựa/thạch cao (`mannequin`), không phải thực thể sống, gán là người sẽ gây lỗi phanh khẩn cấp sai lệch. |
-| `img_032.jpg` | Khung cảnh bến chờ xe buýt ETS tại Edmonton trong giờ cao điểm. | `R-08` | **Không gán lớp `bus` vì không có xe buýt trong ảnh.** Gán `person` cho người chờ xe và `car` cho ô tô lưu thông trên đường. | Tiêu đề là "Bus Stop" (trạm chờ) nhưng khung hình chỉ có người đứng ở trạm và ô tô con trên lòng đường, tuyệt đối không suy diễn có xe buýt. |
+| `img_017.jpg` | Tượng công tước Duke of Wellington cưỡi ngựa đội nón giao thông. | `R-03` | **Không gán box `person`** (ảnh 0 annotation). | Là tượng kim loại nhân tạo tĩnh (`statue`), không có hành vi sống của con người, tuyệt đối không đánh đồng với `person`. |
+| `img_033.jpg` | Ma-nơ-canh thời trang trong tủ kính phố Buchanan. | `R-03` | **Không gán box `person`** (ảnh 0 annotation). | Là ma-nơ-canh bằng nhựa/thạch cao (`mannequin`), không phải thực thể sống, gán là người sẽ gây lỗi phanh khẩn cấp sai lệch. |
+| `img_027.jpg` | Tượng đài xe bán tải bằng đá hoa cương tại nghĩa trang Oak Hill. | `R-03` | **Không gán box `car` hay `truck`** (ảnh 0 annotation). | Là tượng đài tưởng niệm bằng đá tĩnh, không phải phương tiện giao thông thực tế. |
 | `img_002.jpg` | Xe tải 2 tầng chở 8 chiếc ô tô con trên sàn xe. | `R-02` | Gán 1 box `truck` cho xe chở hàng và gán riêng 8 box `car` cho 8 xe con trên hai sàn xe tải. | Mô hình cần phát hiện cả phương tiện vận tải và các phương tiện đang được chở để tránh bỏ sót phân loại ô tô con. |
 | `img_004.jpg` | Hai xe tuk-tuk 3 bánh sơn màu xanh đậu trên vỉa hè. | `R-04` | Đề xuất bổ sung lớp `tuk_tuk`. Khi gán ở v0, tạm thời tick `can_review=true`. | Xe 3 bánh có hình thái khác biệt với ô tô con và xe máy 2 bánh; gán bừa vào `car` hay `motorcycle` sẽ làm hỏng đặc trưng học. |
 | `img_020.jpg` | Dải cầu vồng và hình ảnh phía sau phản chiếu qua gương chiếu hậu ô tô. | `R-05` | **Không gán** bất kỳ box nào cho các đối tượng bên trong mặt kính gương. | Ảnh trong gương là ảnh ảo 2D, đối tượng thực tế không nằm tại vị trí gương xe. |
@@ -123,4 +121,4 @@ Dưới đây là 7 tình huống biên thực tế được thành viên 102 kh
 | Phiên bản | Thay đổi chính | Lý do / Ca thực tế đối chiếu |
 |:---:|---|---|
 | `v0` | Bản khởi đầu do giảng viên cung cấp. | Quá sơ sài, chỉ có 5 lớp định tính, thiếu quy tắc ca khó. |
-| `v0.1` | Bản cá nhân của thành viên 102: <br/>- **Phân định dứt khoát người là người thật, tượng (`statue`) và ma-nơ-canh (`mannequin`) là vật tĩnh vô tri, tuyệt đối không gán `person`.**<br/>- **Đính chính ảnh `img_032.jpg` không có xe buýt** (chỉ có người chờ xe và ô tô).<br/>- Bổ sung định lượng ngưỡng % cho `occluded_level`.<br/>- Quy định rõ vẽ tách box người và xe máy.<br/>- Đưa ra quy tắc cho hàng hóa cồng kềnh, xe chở xe. | Khắc phục hoàn toàn các ca biên thực tế phát hiện trong 40 ảnh trước buổi họp thống nhất v1.0 của nhóm. |
+| `v0.1` | Bản cá nhân của thành viên 102: <br/>- **Phân định dứt khoát người là người thật, tượng (`statue`) và ma-nơ-canh (`mannequin`) là vật tĩnh vô tri, tuyệt đối không gán `person`.**<br/>- Bổ sung định lượng ngưỡng % cho `occluded_level`.<br/>- Quy định rõ vẽ tách box người và xe máy.<br/>- Đưa ra quy tắc cho hàng hóa cồng kềnh, xe chở xe, loại trừ tượng đài xe đá (`img_027.jpg`). | Khắc phục hoàn toàn các ca biên thực tế phát hiện trong 40 ảnh trước buổi họp thống nhất v1.0 của nhóm. |
