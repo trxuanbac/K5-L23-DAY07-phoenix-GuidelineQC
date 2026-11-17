@@ -1,0 +1,4 @@
+image,region,rule_id,note,status
+img_009.jpg,xe khách giữa ảnh,R-08/R-10,Chưa đủ căn cứ chốt van/minibus/bus; không tạo lớp ép.,PENDING_102
+img_011.jpg,Predator tiền cảnh; các xe trang trí,R-04/R-08,"Cần xác nhận người hóa trang hay tượng, xe thật hay mô hình; chưa tạo box suy đoán.",PENDING_102
+img_024.jpg,xe vàng trên nóc ô tô,R-04/R-08,Chưa chốt xe thật/mô hình; xem vùng này trước khi Release.,PENDING_102

@@ -68,4 +68,4 @@
 - [Xếp hạng ảnh](image_scores.csv)
 - [Ảnh chồng nhãn tổng quan](../../work/viz/_overview.png)
 
-Màu overlay: 101 đỏ, 102 xanh. `work/` chỉ dùng cục bộ, không push/nộp. Bảng quyết định mới có 860 dòng và chưa điền người chốt, quyết định hay kiểm lại. Hai thành viên đối chiếu ảnh/guideline rồi điền bảng; sau đó mới chốt guideline v1.1, prepare_calibration.py, sửa nhãn và QC. `consensus_draft.json` là nháp, không phải nhãn cuối đã duyệt.
+Màu overlay: 101 đỏ, 102 xanh. `work/` chỉ dùng cục bộ, không push/nộp. Khi kết thúc Pha 4, bảng quyết định có 860 dòng còn trống; bản này được giữ tại `history/phase5-before-ai-proposals/calibration_decisions.csv`. Ngày 2026-11-17 đã bổ sung đề xuất AI riêng cho các ca, chưa có người thật chốt hoặc kiểm lại. Xem [nguồn và giới hạn](AI_CALIBRATION_PROVENANCE.md) và [báo cáo bàn giao Hold](QC_REPORT.md). `consensus_draft.json` vẫn là nháp, không phải nhãn đã duyệt.

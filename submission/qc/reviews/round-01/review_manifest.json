@@ -1,0 +1,9 @@
+{
+  "round": 1,
+  "mode": "full",
+  "seed": null,
+  "labels_sha256": "567123437647c34af802779ef6a85e6351f3661051be604b4c5225ba19c3dd17",
+  "batch_manifest_sha256": "2eaa2ed01eb00abe17b5e18b28af47053ea4fcc481c567b758c821cb68043c03",
+  "sample_sha256": "f478372c4112c15194bea8aee98755e618988ae2c457088a524e81d848b50bfb",
+  "calibration_decisions_sha256": "3b22124b7410f2aaa976a3d2b73d7d2f5ec34f799dc960bd49ce5ebe0f708a5f"
+}

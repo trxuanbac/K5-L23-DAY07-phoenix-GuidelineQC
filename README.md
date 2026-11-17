@@ -1,5 +1,7 @@
 # Day 07 Lab — Guideline, Taxonomy & QC
 
+**Hồ sơ Phoenix ngày 2026-11-17: [HOLD — xem trạng thái và phần chờ review](SUBMISSION_STATUS.md).** Bản calibration hiện là đề xuất AI; chưa có xác nhận QC người thật.
+
 **Nhóm 2–5 người · 4 giờ · 40 ảnh đường phố · gán box bằng CVAT**
 
 Bạn nhận một guideline **sơ sài** và 40 ảnh chứa nhiều tình huống mà nó không nói tới.
