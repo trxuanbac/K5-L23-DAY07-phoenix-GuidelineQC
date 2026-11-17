@@ -1,0 +1,6 @@
+# QC manifests hash the exact bytes of inputs and generated artifacts.
+# Preserve those bytes across checkouts instead of converting line endings.
+submission/** -text
+data/images/** -text
+# The CSV writer emits CRLF intentionally; CR belongs to the line ending.
+submission/**/*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

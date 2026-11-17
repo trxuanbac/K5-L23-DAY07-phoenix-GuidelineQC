@@ -1,0 +1,113 @@
+{
+  "task_101": 20,
+  "job_101": 20,
+  "export_format": "COCO 1.0",
+  "save_images": false,
+  "exported_at": "2026-11-16T15:58:46.814Z",
+  "repository_commit": "8b1235e936cdc7ca806869e3b355541ab39d052e",
+  "101_sha256": "ea15d37635d2b277d2bf80976fd23bc896ed895fb37d1921b8bb0e401db18789",
+  "102_sha256": "9c975ab2c13e3ce72e9bd170edc21ae98646cbbfcdbea8f65ebdf64019c239ac",
+  "101_annotations": 541,
+  "102_annotations": 368,
+  "101_source_note": "CVAT saved annotations; AI assistance was used earlier in this conversation; user reports annotation complete. No human review or independence certification is inferred.",
+  "validation": "passed_structure_with_small_object_warnings",
+  "small_object_warnings": [
+    {
+      "annotator": "102",
+      "image": "img_009.jpg",
+      "id": 101,
+      "label": "person",
+      "height_px": 16.0
+    },
+    {
+      "annotator": "102",
+      "image": "img_009.jpg",
+      "id": 102,
+      "label": "person",
+      "height_px": 15.670000000000016
+    },
+    {
+      "annotator": "102",
+      "image": "img_034.jpg",
+      "id": 301,
+      "label": "person",
+      "height_px": 19.349999999999994
+    }
+  ],
+  "attribute_distributions": {
+    "101": {
+      "occluded_level": {
+        "2": 160,
+        "1": 244,
+        "0": 120,
+        "3": 1
+      },
+      "truncated": {
+        "no": 439,
+        "yes": 86
+      },
+      "can_review": {
+        "false": 386,
+        "true": 139
+      }
+    },
+    "102": {
+      "occluded_level": {
+        "0": 71,
+        "2": 87,
+        "3": 115,
+        "1": 95
+      },
+      "truncated": {
+        "no": 307,
+        "yes": 61
+      },
+      "can_review": {
+        "false": 368
+      }
+    }
+  },
+  "artifacts": {
+    "submission/qc/iaa_summary.json": "b4890104566503878e46924adf09b56e727f030ac7a459c604dd1c5a0a7d48db",
+    "submission/qc/iaa_summary.md": "61bf361d8be3e5df42945afbd074896075c59ed2743181209f0b270222523ada",
+    "submission/qc/calibration_candidates.csv": "992b22d4ac7cfa049c8865e804f33a45aca2d1e8b75ee41b36dbe48366f70d9d",
+    "submission/qc/calibration_decisions.csv": "38f11b33ca5e9b75ec672ffc22acce6bdc065bc27aaf72f54361610acff058be",
+    "submission/qc/calibration_context.json": "0e784bdad09a7a0f36376fb5d93207e14f2fffc273e9f68f15f2a716889b52b2",
+    "submission/qc/image_scores.csv": "7825bad72c8f56e94c557cb50b2231f94ec2b1c43208e52ecf3c1f9becf7e9a8",
+    "submission/qc/consensus_draft.json": "e494ac85845dada3a3a02ebe5019a73d0e608466122b0503374972d9e8ce614c",
+    "submission/qc/flagged_images.txt": "73dcfd1c38d6a0b244ae2ab6e61e3418b26fe389204fdbaf094c4d1452b035e1",
+    "submission/qc/rule_review_warnings.csv": "e2394fec277b121b69c1b8eddea6c5b7d8c450a1b6fc4bce96591f1ebcbcb77e",
+    "submission/qc/PHASE4_REPORT.md": "1c35aef667c9a045d18a95478bb87283089cb66cf655b65014881d0faee331fc"
+  },
+  "flagged_overlay_count": 36,
+  "review_decisions_recorded": false,
+  "native_snapshot_classes_attributes_match": true,
+  "native_snapshot_geometry_tolerance_px": 0.011,
+  "coordinate_rounding_cases": [
+    {
+      "image": "img_009.jpg",
+      "label": "person",
+      "native_round2": [
+        560.92,
+        395.15,
+        21.34,
+        28.18
+      ],
+      "export_bbox": [
+        560.92,
+        395.15,
+        21.35,
+        28.18
+      ]
+    }
+  ],
+  "comparison_base_commit": "8b1235e936cdc7ca806869e3b355541ab39d052e",
+  "updated_at": "2026-11-17T02:50:04.813943+00:00",
+  "source_102_commit": "8b1235e936cdc7ca806869e3b355541ab39d052e",
+  "source_101_export_repository_commit": "6c5ffd23204aa53c47b5079fdf979eb4adb2b11e",
+  "rule_review_warning_counts": {
+    "level3_without_review": 115,
+    "below_min_height": 3
+  },
+  "previous_phase4_archive": "submission/qc/history/phase4-before-8b1235e"
+}
