@@ -1,6 +1,8 @@
 {
   "date": "2026-11-17",
   "status": "HOLD",
+  "round": 2,
+  "labels_sha256": "4bdffea5e9bf69b8ea69bcdef541a23db0a6dcb2e7ee922828215a4b02422f1c",
   "frozen_inputs_verified": {
     "submission/labels/101.json": "ea15d37635d2b277d2bf80976fd23bc896ed895fb37d1921b8bb0e401db18789",
     "submission/labels/102.json": "9c975ab2c13e3ce72e9bd170edc21ae98646cbbfcdbea8f65ebdf64019c239ac",
@@ -14,26 +16,21 @@
     "submission/qc/consensus_draft.json": "e494ac85845dada3a3a02ebe5019a73d0e608466122b0503374972d9e8ce614c",
     "submission/qc/calibration_context.json": "0e784bdad09a7a0f36376fb5d93207e14f2fffc273e9f68f15f2a716889b52b2"
   },
-  "image_count": 40,
-  "final_annotation_count": 554,
-  "object_count": 536,
-  "ignore_count": 18,
-  "human_reviewed_images": 0,
-  "total_review_images": 40,
-  "ai_proposal_cases": 860,
-  "human_confirmed_cases": 0,
-  "open_image_issues": 3,
-  "review_flags": 506,
-  "mapping_rows": 554,
-  "labels_sha256": "567123437647c34af802779ef6a85e6351f3661051be604b4c5225ba19c3dd17",
-  "checks": [
-    "original label/IAA bytes unchanged",
-    "require_iaa inputs/artifacts verified",
-    "final COCO structurally valid",
-    "all 554 proposal IDs mapped",
-    "40 human-review rows remain blank",
-    "860 case IDs unique and explicitly provisional",
-    "check_submission.py --round 1 returned 0"
-  ],
-  "meaning": "Structural and provenance checks passed; no human QC accuracy or Release certification."
+  "images": 40,
+  "annotations": 554,
+  "objects": 536,
+  "ignore": 18,
+  "review_source": "User-reported no-error batch result entered by Codex; 101 and full-batch scope inferred from job20 context and recorded explicitly.",
+  "reported_review_images": 40,
+  "separate_per_image_findings_supplied": false,
+  "independent_102_review_confirmed": false,
+  "reported_error_images": 0,
+  "reported_error_objects": 0,
+  "general_object_flags_cleared": 501,
+  "ignore_flags_cleared": 2,
+  "remaining_required_level3_flags": 5,
+  "remaining_image_issues": 3,
+  "geometry_classes_and_other_attributes_preserved": true,
+  "previous_round_1_preserved": true,
+  "check_submission_round_2_exit_code": 0
 }

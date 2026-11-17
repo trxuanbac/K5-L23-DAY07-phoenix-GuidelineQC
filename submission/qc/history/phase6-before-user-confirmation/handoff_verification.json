@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-17",
+  "status": "HOLD",
+  "frozen_inputs_verified": {
+    "submission/labels/101.json": "ea15d37635d2b277d2bf80976fd23bc896ed895fb37d1921b8bb0e401db18789",
+    "submission/labels/102.json": "9c975ab2c13e3ce72e9bd170edc21ae98646cbbfcdbea8f65ebdf64019c239ac",
+    "submission/taxonomy.json": "dbef3ea8dac0c53d7e83af51e667a4697ac7acbb0a6422df5fbe680f9d81f3d0",
+    "submission/guidelines/guideline_v1.0_agreed.md": "aef365b64909cade48c84eb4dd2dcca83e859638deadb209144b7c963f78dd28",
+    "submission/qc/assignment.csv": "a1b19a4c7c1c6c152614ff8c442d9b68f61a04b4914d0b49ac2ed2bf57cf1d93",
+    "submission/qc/iaa_summary.json": "b4890104566503878e46924adf09b56e727f030ac7a459c604dd1c5a0a7d48db",
+    "submission/qc/iaa_summary.md": "61bf361d8be3e5df42945afbd074896075c59ed2743181209f0b270222523ada",
+    "submission/qc/calibration_candidates.csv": "992b22d4ac7cfa049c8865e804f33a45aca2d1e8b75ee41b36dbe48366f70d9d",
+    "submission/qc/flagged_images.txt": "73dcfd1c38d6a0b244ae2ab6e61e3418b26fe389204fdbaf094c4d1452b035e1",
+    "submission/qc/consensus_draft.json": "e494ac85845dada3a3a02ebe5019a73d0e608466122b0503374972d9e8ce614c",
+    "submission/qc/calibration_context.json": "0e784bdad09a7a0f36376fb5d93207e14f2fffc273e9f68f15f2a716889b52b2"
+  },
+  "image_count": 40,
+  "final_annotation_count": 554,
+  "object_count": 536,
+  "ignore_count": 18,
+  "human_reviewed_images": 0,
+  "total_review_images": 40,
+  "ai_proposal_cases": 860,
+  "human_confirmed_cases": 0,
+  "open_image_issues": 3,
+  "review_flags": 506,
+  "mapping_rows": 554,
+  "labels_sha256": "567123437647c34af802779ef6a85e6351f3661051be604b4c5225ba19c3dd17",
+  "checks": [
+    "original label/IAA bytes unchanged",
+    "require_iaa inputs/artifacts verified",
+    "final COCO structurally valid",
+    "all 554 proposal IDs mapped",
+    "40 human-review rows remain blank",
+    "860 case IDs unique and explicitly provisional",
+    "check_submission.py --round 1 returned 0"
+  ],
+  "meaning": "Structural and provenance checks passed; no human QC accuracy or Release certification."
+}

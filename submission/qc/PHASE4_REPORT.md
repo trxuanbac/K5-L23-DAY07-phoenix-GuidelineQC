@@ -69,3 +69,6 @@
 - [Ảnh chồng nhãn tổng quan](../../work/viz/_overview.png)
 
 Màu overlay: 101 đỏ, 102 xanh. `work/` chỉ dùng cục bộ, không push/nộp. Khi kết thúc Pha 4, bảng quyết định có 860 dòng còn trống; bản này được giữ tại `history/phase5-before-ai-proposals/calibration_decisions.csv`. Ngày 2026-11-17 đã bổ sung đề xuất AI riêng cho các ca, chưa có người thật chốt hoặc kiểm lại. Xem [nguồn và giới hạn](AI_CALIBRATION_PROVENANCE.md) và [báo cáo bàn giao Hold](QC_REPORT.md). `consensus_draft.json` vẫn là nháp, không phải nhãn đã duyệt.
+
+
+Cập nhật sau đối chiếu: người dùng đã báo không còn lỗi và kết quả được nhập theo xác nhận chung vào vòng QC 2. Xem QC_REPORT.md và user_confirmation_receipt.json; số liệu IAA của Pha 4 giữ nguyên.

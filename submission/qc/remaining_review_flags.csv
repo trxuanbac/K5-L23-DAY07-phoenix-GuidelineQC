@@ -1,0 +1,6 @@
+image,object_id,class,occluded_level,rule_id,note
+img_005.jpg,63,person,3,R-03/R-08,Giữ cờ bắt buộc cho mức 3: chưa có ước lượng che khuất cụ thể thay thế trong xác nhận chung.
+img_006.jpg,90,car,3,R-03/R-08,Giữ cờ bắt buộc cho mức 3: chưa có ước lượng che khuất cụ thể thay thế trong xác nhận chung.
+img_008.jpg,114,truck,3,R-03/R-08,Giữ cờ bắt buộc cho mức 3: chưa có ước lượng che khuất cụ thể thay thế trong xác nhận chung.
+img_018.jpg,207,car,3,R-03/R-08,Giữ cờ bắt buộc cho mức 3: chưa có ước lượng che khuất cụ thể thay thế trong xác nhận chung.
+img_021.jpg,315,person,3,R-03/R-08,Giữ cờ bắt buộc cho mức 3: chưa có ước lượng che khuất cụ thể thay thế trong xác nhận chung.

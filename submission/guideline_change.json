@@ -1,7 +1,8 @@
 {
   "kind": "editorial",
-  "summary": "Đề xuất AI giải thích lại R-01 đến R-10 đã có trong v1.0; không đổi taxonomy, thuộc tính hoặc ngưỡng. Chưa được nhóm người thật phê duyệt.",
-  "status": "AI_PROPOSAL_PENDING_101_102",
+  "summary": "Giải thích lại R-01 đến R-10 đã có trong v1.0; không đổi taxonomy, thuộc tính hoặc ngưỡng. Người dùng 101 theo ngữ cảnh job20 xác nhận chung; chưa có xác nhận riêng của 102.",
+  "status": "USER_BATCH_ACCEPTED_101_PENDING_INDEPENDENT_102",
   "prepared_by": "AI-Codex",
-  "date": "2026-11-17"
+  "date": "2026-11-17",
+  "confirmation_receipt": "submission/qc/user_confirmation_receipt.json"
 }
