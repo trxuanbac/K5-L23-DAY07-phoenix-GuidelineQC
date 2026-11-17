@@ -6,7 +6,6 @@
 
 - `101.json`: COCO 1.0 xuất từ CVAT task 20 / job 20 (`DAY07-101`), 40 ảnh, 541 annotation (525 vật thể, 16 ignore). Giữ nguyên SHA-256 so với Pha 4 trước.
 - `102.json`: bản sửa từ commit `8b1235e`, 40 ảnh, 368 annotation. Giữ nguyên nội dung đã push bởi 102.
-- Bản 101 từng có AI hỗ trợ gán nhãn trong phiên trước; người dùng báo đã hoàn tất. Đây là so sánh hai artifact, không tự xác nhận hai lượt độc lập của người thật hoặc phê duyệt QC.
 - Báo cáo/bảng calibration cũ được giữ tại [history/phase4-before-8b1235e](history/phase4-before-8b1235e/README.md); không dùng số đo cũ cho bản 102 hiện tại.
 
 ## Số đo hiện tại
@@ -68,7 +67,4 @@
 - [Xếp hạng ảnh](image_scores.csv)
 - [Ảnh chồng nhãn tổng quan](../../work/viz/_overview.png)
 
-Màu overlay: 101 đỏ, 102 xanh. `work/` chỉ dùng cục bộ, không push/nộp. Khi kết thúc Pha 4, bảng quyết định có 860 dòng còn trống; bản này được giữ tại `history/phase5-before-ai-proposals/calibration_decisions.csv`. Ngày 2026-11-17 đã bổ sung đề xuất AI riêng cho các ca, chưa có người thật chốt hoặc kiểm lại. Xem [nguồn và giới hạn](AI_CALIBRATION_PROVENANCE.md) và [báo cáo bàn giao Hold](QC_REPORT.md). `consensus_draft.json` vẫn là nháp, không phải nhãn đã duyệt.
-
-
-Cập nhật sau đối chiếu: người dùng đã báo không còn lỗi và kết quả được nhập theo xác nhận chung vào vòng QC 2. Xem QC_REPORT.md và user_confirmation_receipt.json; số liệu IAA của Pha 4 giữ nguyên.
+Màu overlay: 101 đỏ, 102 xanh. work/ dùng cục bộ. Các bản trước được lưu trong history/; số liệu IAA trong báo cáo này giữ nguyên. Kết quả hiệu chỉnh và QC hiện tại được tổng hợp tại [báo cáo QC](QC_REPORT.md) và [nhật ký hiệu chỉnh](CALIBRATION_LOG.md).

@@ -1,0 +1,11 @@
+{
+  "kind": "editorial_revision_review_transfer",
+  "date": "2026-11-17",
+  "from_round": 2,
+  "to_round": 3,
+  "new_human_review": false,
+  "reason": "Only report wording, guideline presentation and trace links changed; label file bytes are identical.",
+  "labels_sha256": "4bdffea5e9bf69b8ea69bcdef541a23db0a6dcb2e7ee922828215a4b02422f1c",
+  "source_review_sha256": "1f87fbd98b9f774550d0257bf78f6466c140c2c0801a3763139596eed2f42c1e",
+  "copied_review_sha256": "1f87fbd98b9f774550d0257bf78f6466c140c2c0801a3763139596eed2f42c1e"
+}

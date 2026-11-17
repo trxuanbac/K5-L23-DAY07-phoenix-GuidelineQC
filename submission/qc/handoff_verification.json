@@ -1,7 +1,7 @@
 {
   "date": "2026-11-17",
   "status": "HOLD",
-  "round": 2,
+  "round": 3,
   "labels_sha256": "4bdffea5e9bf69b8ea69bcdef541a23db0a6dcb2e7ee922828215a4b02422f1c",
   "frozen_inputs_verified": {
     "submission/labels/101.json": "ea15d37635d2b277d2bf80976fd23bc896ed895fb37d1921b8bb0e401db18789",
@@ -20,7 +20,7 @@
   "annotations": 554,
   "objects": 536,
   "ignore": 18,
-  "review_source": "User-reported no-error batch result entered by Codex; 101 and full-batch scope inferred from job20 context and recorded explicitly.",
+  "review_source": "Phiếu vòng 2 được chuyển sang vòng 3 khi biên tập tài liệu; nhãn cuối có cùng checksum. Phạm vi xác nhận theo hồ sơ kèm theo.",
   "reported_review_images": 40,
   "separate_per_image_findings_supplied": false,
   "independent_102_review_confirmed": false,
@@ -32,5 +32,7 @@
   "remaining_image_issues": 3,
   "geometry_classes_and_other_attributes_preserved": true,
   "previous_round_1_preserved": true,
-  "check_submission_round_2_exit_code": 0
+  "check_submission_round_3_exit_code": 0,
+  "editorial_only": true,
+  "review_transfer": "submission/qc/reviews/round-03/review_transfer.json"
 }

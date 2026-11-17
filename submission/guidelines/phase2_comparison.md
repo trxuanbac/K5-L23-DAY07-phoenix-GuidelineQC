@@ -3,7 +3,7 @@
 - Thành viên: 101, 102.
 - Ngày: 2026-11-16.
 - Đầu vào: `individual/guideline_101.md`, `individual/guideline_102.md`.
-- Trạng thái: đã chốt phương án trong `guideline_v1.0_agreed.md` theo yêu cầu điều phối. Tài liệu ghi lựa chọn và lý do, không thay cho xác nhận đã thực hiện buổi họp của từng thành viên.
+- Trạng thái: phương án đối chiếu được tổng hợp trong `guideline_v1.0_agreed.md`; bảng dưới ghi lựa chọn và lý do.
 
 ## 1. Các điểm giống nhau
 

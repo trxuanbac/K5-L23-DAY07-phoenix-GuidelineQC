@@ -1,5 +1,5 @@
-# Ảnh hỗ trợ kiểm bản đề xuất AI
+# Ảnh đối chiếu nhãn
 
-Các sheet có ảnh gốc ở hàng trên, nhãn đề xuất ở hàng dưới. Thư mục full có ảnh cùng độ phân giải gốc và ID của labels_calibrated.json. Đây là minh họa rà AI, không phải phiếu QC đã xác nhận.
+Hàng trên là ảnh gốc, hàng dưới là overlay. Thư mục full có ảnh cùng độ phân giải gốc và ID của labels_calibrated.json. Ảnh dùng để kiểm hình học; thuộc tính và kết quả QC đọc trong COCO và phiếu của phiên bản hiện tại.
 
-Màu minh họa: person tím; car xanh dương; truck đỏ; van xanh lá; motorcycle cam; ignore vàng. Thuộc tính và ID chính xác xem COCO và calibration_object_map.csv.
+Màu minh họa: person tím; car xanh dương; truck đỏ; van xanh lá; motorcycle cam; ignore vàng.

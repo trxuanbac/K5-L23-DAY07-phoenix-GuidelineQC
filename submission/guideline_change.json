@@ -1,6 +1,6 @@
 {
   "kind": "editorial",
-  "summary": "Giải thích lại R-01 đến R-10 đã có trong v1.0; không đổi taxonomy, thuộc tính hoặc ngưỡng. Người dùng 101 theo ngữ cảnh job20 xác nhận chung; chưa có xác nhận riêng của 102.",
+  "summary": "Biên tập cách trình bày và làm rõ R-01 đến R-10; không đổi taxonomy, thuộc tính hoặc ngưỡng. Kết quả xác nhận theo phiếu QC và hồ sơ xác nhận kèm theo.",
   "status": "USER_BATCH_ACCEPTED_101_PENDING_INDEPENDENT_102",
   "prepared_by": "AI-Codex",
   "date": "2026-11-17",

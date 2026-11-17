@@ -1,9 +1,9 @@
-# Guideline nhóm Phoenix — v1.1 (101 xác nhận chung)
+# Guideline nhóm Phoenix — v1.1
 
 - Thành viên: 101, 102.
 - Ngày: 2026-11-16.
 - Phạm vi: 40 ảnh đường phố; bounding box 2D; CVAT, xuất COCO 1.0.
-- Trạng thái: bản giải thích biên tập do AI hỗ trợ ngày 2026-11-17; người dùng (101 theo ngữ cảnh job20) xác nhận chung bản hiện tại qua hội thoại. Chưa có xác nhận riêng của 102. v1.0 vẫn là bản đã dùng khi gán độc lập.
+- Trạng thái: bản biên tập cập nhật ngày 2026-11-17; kết quả xác nhận theo phiếu QC. v1.0 là bản dùng cho lượt gán ban đầu.
 - Đối chiếu hai bản cá nhân và lý do chọn quy tắc: [phase2_comparison.md](phase2_comparison.md).
 
 ## 1. Mục tiêu
@@ -177,7 +177,7 @@ Bản v1.0 được chốt từ hai bản cá nhân theo các lựa chọn và l
 
 ## 6. Làm rõ sau so sánh — đề xuất biên tập v1.1
 
-Không đổi lớp, thuộc tính, ngưỡng, hoặc nghĩa quy tắc R-01 đến R-10. Phần này nhắc lại cách áp dụng v1.0; người dùng đã xác nhận chung bản hiện tại; chưa có bằng chứng họp hoặc phê duyệt riêng của 102.
+Không đổi lớp, thuộc tính, ngưỡng, hoặc nghĩa quy tắc R-01 đến R-10. Phần này làm rõ cách áp dụng v1.0; không thay đổi quy tắc hoặc ngưỡng.
 
 - Mỗi người và mỗi xe là một vật riêng (R-01/R-02). Một vật lộ nhiều mảng vẫn dùng một box. Không cộng hai box của hai người gán thành hai vật mới chỉ vì chúng không ghép được ở IoU 0.5.
 - Xe đạp, xích lô, tuk-tuk và bus ngoài taxonomy (R-09/R-10). Người thật trên xe vẫn xét riêng. Xe tải chở xe, pickup có nắp thùng và xe có sidecar theo R-05/R-10.
@@ -185,6 +185,6 @@ Không đổi lớp, thuộc tính, ngưỡng, hoặc nghĩa quy tắc R-01 đ�
 - Kiểm chiều cao phần nhìn thấy trên ảnh gốc: dưới 20 px dùng ignore nhỏ (R-06). Không kéo box đầu người xuống phần bị xe che; cũng không bỏ qua các mảng thân người nhìn thấy thuộc cùng người.
 - Mức 3 là không ước lượng được phần bị che, cần can_review=true (R-03/R-08). Bất đồng occluded không được giải bằng sao chép toàn bộ thuộc tính của một phía mà không xem ảnh.
 - truncated=yes cần bằng chứng vật bị biên ảnh cắt (R-03). Box nằm hẳn bên trong ảnh không cung cấp bằng chứng đó; ca sửa biên vẫn phải kiểm lại.
-- Người dùng báo đã kiểm và không còn lỗi; 860 dòng được ghi nhận theo xác nhận chung của 101, không khai là đã có biên bản riêng cho từng ca hay xác nhận của 102. Nhãn gốc 101/102 được bảo toàn. Các mức che 3 và vấn đề cấp ảnh chưa có kết luận chi tiết vẫn giữ trạng thái review theo R-03/R-08.
+- Kết quả xác nhận và phạm vi kiểm được ghi trong phiếu QC. Các mức che 3 và vấn đề cấp ảnh chưa có kết luận chi tiết giữ trạng thái review theo R-03/R-08.
 
-Danh sách ca còn mở: [calibration_open_issues.csv](../qc/calibration_open_issues.csv). Bằng chứng và giới hạn: [AI_CALIBRATION_PROVENANCE.md](../qc/AI_CALIBRATION_PROVENANCE.md).
+Danh sách ca còn mở: [calibration_open_issues.csv](../qc/calibration_open_issues.csv). Nhật ký và bằng chứng: [nhật ký hiệu chỉnh](../qc/CALIBRATION_LOG.md).

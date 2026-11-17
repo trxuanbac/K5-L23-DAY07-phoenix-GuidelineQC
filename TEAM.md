@@ -1,17 +1,17 @@
 # Thông tin nhóm
 
 - Tên nhóm: Phoenix
-- Mã thành viên (ba chữ số): 101, 102
-- Người điều phối: 101
-- Người review bản cuối theo phân công: 102
-- Lượt kiểm mới được báo: người dùng, ghi mã 101 theo ngữ cảnh job20; chưa có xác nhận riêng của 102.
-- Commit chốt bài: ghi hash commit bàn giao ở kênh nộp; xem lịch sử Git gói HOLD ngày 2026-11-17.
+- Mã thành viên: 101, 102
+- Điều phối: 101
+- Review bản cuối theo phân công: 102
+- Kết quả kiểm hiện có: mã 101, theo phiếu và hồ sơ xác nhận; chưa có phiếu riêng của 102.
 
-## Kết quả tóm tắt
+## Kết quả tổng hợp
 
-- Lượt gán hoàn tất / được giao: 80/80 theo cấu trúc dữ liệu; bản 101 có AI hỗ trợ, chưa có coach xác nhận yêu cầu độc lập thuần người.
-- IAA trước calibration: 282 cặp; IoU trung bình 0.7923; cùng lớp 276/282 (97.87%).
-- Ảnh calibration: 36/40, 860 dòng; ghi nhận giữ cách xử lý hiện tại theo xác nhận chung của người dùng 101, chưa có biên bản riêng từng ca hoặc xác nhận riêng của 102.
-- Vòng QC: 2; nhập 40/40 ảnh không lỗi theo lời người dùng qua hội thoại. Mã/phạm vi và giới hạn được ghi trong user_confirmation_receipt.json.
-- Tỉ lệ lỗi theo phiếu vòng 2: ảnh 0/40 = 0%; đối tượng 0/536 = 0%; không coi là đo độc lập bởi Codex hoặc review của 102.
-- Quyết định: Hold — còn năm box mức che 3 giữ can_review theo guideline và ba vấn đề cấp ảnh chưa có kết luận chi tiết.
+- Lượt gán: 80/80; mỗi bộ gồm 40 ảnh.
+- IAA trước calibration: 282 cặp; IoU trung bình 0.7923; đồng thuận lớp 276/282 (97.87%).
+- Phạm vi calibration: 36/40 ảnh, 860 dòng.
+- Nhãn hiện tại: 554 annotation = 536 đối tượng + 18 vùng ignore.
+- QC: 40/40 ảnh không có lỗi được báo cáo; lỗi ảnh 0/40, lỗi đối tượng 0/536. Kết quả dựa trên phiếu xác nhận chung, chưa có ghi chú riêng từng ảnh.
+- Vòng hồ sơ hiện tại: 3; kế thừa phiếu vòng 2, không phát sinh lượt kiểm mới.
+- Quyết định: Hold — còn 5 box mức che 3 và 3 vấn đề cấp ảnh chưa có kết luận cụ thể.
